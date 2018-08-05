@@ -144,7 +144,9 @@ Tech Stack
 
 2. Service Registry
 
-    * ~Consul~ (each service should run on static port and ip)
+.. note:: 
+    Consul is useless for us because each service is going to have a randomly chosen port.
+
     * etcd
 
 3. Message Queue
