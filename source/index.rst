@@ -144,7 +144,8 @@ Tech Stack
 
 2. Service Registry
 
-    * Consul
+    * ~Consul~ (each service should run on static port and ip)
+    * etcd
 
 3. Message Queue
     * RabbitMQ
