@@ -34,7 +34,10 @@ extensions = ['sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages']
+    'sphinx.ext.githubpages',
+    "sphinxcontrib.blockdiag",
+    "sphinxcontrib.actdiag",
+    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -214,7 +217,21 @@ epub_copyright = copyright
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
-
-
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# Additional
+
+import os
+blockdiag_fontpath = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    "_static",
+    "fonts",
+    "PT_Serif-Web-Bold.ttf")
+blockdiag_antialias = True
+blockdiag_transparency= True
+blockdiag_html_image_format= "SVG"
+actdiag_fontpath = blockdiag_fontpath
+actdiag_antialias = True
+actdiag_transparency= True
+actdiag_html_image_format= "SVG"
